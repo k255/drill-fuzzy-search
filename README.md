@@ -1,6 +1,6 @@
 # drill-fuzzy-search
 
-drill-fuzzy-search is a plugin for [Apache Drill] that supports similarity search and distance search based on SimMetrics library.
+drill-fuzzy-search is a plugin for [Apache Drill] that supports simple similarity and distance search.
 
 What is supported:
   - [Levenshtein]
