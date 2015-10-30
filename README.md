@@ -72,6 +72,7 @@ select columns[0] as textA, columns[1] as textB,
 
 ## See also
 Feature request - https://issues.apache.org/jira/browse/DRILL-3747
+
 Pull request - https://github.com/apache/drill/pull/224
 
 ## Author
