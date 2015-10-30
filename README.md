@@ -70,6 +70,10 @@ select columns[0] as textA, columns[1] as textB,
     from cp.`sample-data/similarities.csv`;
 ```
 
+## See also
+Feature request - https://issues.apache.org/jira/browse/DRILL-3747
+Pull request - https://github.com/apache/drill/pull/224
+
 ## Author
 
 Karol Potocki
