@@ -20,7 +20,7 @@ After building the code you can start Drill with:
 ```sh
 $ bin/drill-embedded
 ```
-
+You can also use [my fork of Apache Drill with drill-gis] - drill-fuzzysearch branch.
 ## Usage
 
 ### Sample dataset
@@ -47,20 +47,27 @@ select * from dfs.deault.`/home/k255/drill/sample-data/similarities.csv`;
 Comparison of texts with different metrics:
 ```
 select columns[0] as textA, columns[1] as textB, 
-	levenshtein(columns[0], columns[1]) as distance
-    from cp.`sample-data/sample-data/similarities.csv`;
+    levenshtein(columns[0], columns[1]) as distance
+    from cp.`sample-data/similarities.csv`;
+```
+
+```
+select columns[0] as textA, columns[1] as textB,
+    levenshtein(columns[0], columns[1]) as distance
+    from cp.`sample-data/similarities.csv`
+    where levenshtein(columns[0], columns[1]) > 0.7;
 ```
 
 ```
 select columns[0] as textA, columns[1] as textB, 
-	jaro(columns[0], columns[1]) as distance
-    from cp.`sample-data/sample-data/similarities.csv`;
+    jaro(columns[0], columns[1]) as distance
+    from cp.`sample-data/similarities.csv`;
 ```
 
 ```
 select columns[0] as textA, columns[1] as textB, 
-	cosine_similarity(columns[0], columns[1]) as distance
-    from cp.`sample-data/sample-data/similarities.csv`;
+    cosine_similarity(columns[0], columns[1]) as distance
+    from cp.`sample-data/similarities.csv`;
 ```
 
 ## Author
