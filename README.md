@@ -16,6 +16,8 @@ $ mvn clean package
 ```
 then copy target/drill-fuzzy-search* jars to drill's jars/3rdparty directory. Also ensure that to copy simmetrics-core-3.2.3.jar in the same place.
 
+You can download simmetrics dependency manually from [maven repository - simmetrics] or copy it from your local maven repo.
+
 After building the code you can start Drill with:
 ```sh
 $ bin/drill-embedded
@@ -92,3 +94,4 @@ Apache 2.0 License
    [Levenshtein]: <https://en.wikipedia.org/wiki/Levenshtein_distance>
    [Jaro]: <https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance>
    [Cosine similarity]: <https://en.wikipedia.org/wiki/Cosine_similarity>
+   [maven repository - simmetrics]: <http://central.maven.org/maven2/com/github/mpkorstanje/simmetrics-core/3.2.3/simmetrics-core-3.2.3.jar>
